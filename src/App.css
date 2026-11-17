@@ -1,8 +1,3 @@
-
-/* ==============================
-   APP THEME
-================================ */
-
 * {
   box-sizing: border-box;
 }
@@ -1953,261 +1948,164 @@
 }
 
 /* =========================================
-   SKILLSYNC - COMPLETE RESPONSIVE DESIGN
-   Mobile | Tablet | Laptop | Desktop
-========================================= */
+   SKILLSYNC DASHBOARD RESPONSIVENESS
+   ========================================= */
 
-/* ---------- LARGE LAPTOPS ---------- */
+/* ---------- Tablets and Small Laptops ---------- */
 
-@media (min-width: 1200px) {
-  .sidebar {
-    width: 255px;
-  }
+@media screen and (max-width: 900px) {
 
-  .main-content {
-    padding: 35px 45px;
-  }
-
-  .welcome-section {
-    padding: 42px;
-  }
-
-  .analysis-stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-/* ---------- LAPTOPS ---------- */
-
-@media (max-width: 1199px) {
-  .main-content {
-    padding: 28px;
+  .app {
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .sidebar {
-    width: 230px;
-  }
-
-  .welcome-section {
-    padding: 32px;
-  }
-
-  .welcome-icon {
-    right: 30px;
-    font-size: 65px;
-  }
-
-  .analysis-content-card,
-  .job-skills-card,
-  .skills-chart-section {
-    padding: 22px;
-  }
-
-  .brand-text h2 {
-    font-size: 22px;
-  }
-}
-
-/* ---------- TABLETS ---------- */
-
-@media (max-width: 900px) {
-  .sidebar {
-    width: 200px;
+    width: 210px;
+    min-width: 210px;
     padding: 20px 12px;
   }
 
   .main-content {
+    flex: 1;
+    min-width: 0;
     padding: 22px 18px;
   }
 
-  .brand-logo {
-    gap: 9px;
-    padding: 14px 7px;
-  }
-
-  .brand-icon {
-    width: 43px;
-    height: 43px;
-    min-width: 43px;
-  }
-
-  .brand-text h2 {
-    font-size: 20px;
-  }
-
-  .brand-text span {
-    font-size: 7px;
-    letter-spacing: 0.4px;
-  }
-
   .welcome-section {
-    padding: 28px;
+    padding: 30px 24px;
   }
 
   .welcome-section h1 {
-    font-size: 29px;
-    max-width: 85%;
-  }
-
-  .welcome-section p {
-    max-width: 80%;
-    font-size: 14px;
+    font-size: 28px;
   }
 
   .welcome-icon {
-    right: 20px;
+    right: 15px;
     font-size: 55px;
   }
 
   .analysis-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
   }
 
   .ats-score-card,
   .job-match-score-card {
-    gap: 20px;
-    padding: 24px;
+    gap: 18px;
   }
 
-  .analysis-stat-card {
-    padding: 18px;
-  }
-
-  .analysis-stat-card h2 {
-    font-size: 26px;
-  }
-
+  .analysis-content-card,
+  .job-skills-card,
   .resume-upload-section,
   .job-matcher-section {
-    padding: 23px;
+    padding: 20px;
   }
 }
 
-/* ---------- SMALL TABLETS ---------- */
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 75px;
-    padding: 18px 8px;
-  }
+/* ---------- Mobile Devices ---------- */
 
-  .brand-logo {
-    justify-content: center;
-    padding: 12px 0;
-  }
+@media screen and (max-width: 650px) {
 
-  .brand-text,
-  .menu-title,
-  .nav-item span,
-  .sidebar-card,
-  .profile > :not(.avatar) {
-    display: none;
-  }
-
-  .brand-icon {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-  }
-
-  .nav-item {
-    justify-content: center;
-    padding: 13px 5px;
-    font-size: 18px;
-  }
-
-  .profile {
-    justify-content: center;
-  }
-
-  .main-content {
-    padding: 20px 16px;
-  }
-
-  .topbar {
-    margin-bottom: 28px;
-  }
-
-  .welcome-section {
-    padding: 25px 22px;
-  }
-
-  .welcome-section h1 {
-    font-size: 26px;
-  }
-
-  .welcome-icon {
-    display: none;
-  }
-
-  .analysis-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .score-circle,
-  .job-match-circle {
-    width: 115px;
-    height: 115px;
-  }
-
-  .score-circle::before {
-    width: 94px;
-    height: 94px;
-  }
-
-  .job-match-circle-inner {
-    width: 93px;
-    height: 93px;
-  }
-
-  .score-circle h1 {
-    font-size: 29px;
-  }
-
-  .job-match-circle-inner h1 {
-    font-size: 27px;
-  }
-
-  .score-details h3,
-  .job-match-details h3 {
-    font-size: 20px;
-  }
-}
-
-/* ---------- MOBILE PHONES ---------- */
-
-@media (max-width: 600px) {
   .app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     min-height: 100vh;
+    padding-bottom: 75px;
+    overflow-x: hidden;
   }
+
+  /* Bottom Navigation */
 
   .sidebar {
-    width: 60px;
-    min-width: 60px;
-    padding: 15px 6px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    min-width: 100%;
+    height: 68px;
+    min-height: 68px;
+
+    padding: 6px 5px;
+
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-right: none;
+
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.06);
   }
 
-  .brand-icon {
-    width: 39px;
-    height: 39px;
-    min-width: 39px;
-    border-radius: 12px;
-    font-size: 19px;
+  .brand,
+  .brand-logo,
+  .menu-title,
+  .sidebar-bottom,
+  .sidebar-card,
+  .profile {
+    display: none !important;
+  }
+
+  .sidebar nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 3px;
   }
 
   .nav-item {
-    padding: 12px 4px;
-    margin-bottom: 8px;
-    font-size: 16px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+    min-width: 0;
+    padding: 8px 3px;
+    margin: 0;
+
+    font-size: 18px;
+    border-radius: 10px;
   }
 
+  .nav-item span {
+    display: block;
+    font-size: 9px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .nav-item:hover {
+    transform: none;
+  }
+
+  .nav-item.active {
+    box-shadow: none;
+    background: var(--primary-light);
+  }
+
+  /* Main Content */
+
   .main-content {
-    padding: 16px 11px;
+    width: 100%;
+    min-width: 0;
+    padding: 16px 13px 25px;
+    margin: 0;
   }
 
   .topbar {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    gap: 10px;
   }
 
   .breadcrumb {
@@ -2215,73 +2113,76 @@
   }
 
   .theme-btn {
-    width: 37px;
-    height: 37px;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
     font-size: 16px;
   }
 
-  /* Welcome */
+  /* Welcome Dashboard */
 
   .welcome-section {
-    padding: 23px 17px;
-    border-radius: 17px;
-  }
-
-  .welcome-tag {
-    font-size: 9px;
-    padding: 6px 9px;
+    width: 100%;
+    padding: 25px 18px;
+    border-radius: 16px;
   }
 
   .welcome-section h1 {
     font-size: 23px;
     line-height: 1.35;
-    max-width: 100%;
   }
 
   .welcome-section p {
-    max-width: 100%;
     font-size: 12px;
     line-height: 1.7;
   }
 
-  /* Resume Upload */
+  .welcome-tag {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+
+  .welcome-icon {
+    display: none;
+  }
+
+  /* Dashboard Sections */
+
+  .placeholder-section,
+  .resume-upload-section,
+  .analysis-results,
+  .job-matcher-section,
+  .job-results-section,
+  .skills-chart-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+  }
 
   .resume-upload-section,
-  .job-matcher-section {
-    padding: 17px 13px;
-    margin-top: 20px;
+  .job-matcher-section,
+  .skills-chart-section,
+  .analysis-content-card,
+  .job-skills-card {
+    padding: 17px 14px;
     border-radius: 15px;
   }
 
+  /* Resume Upload */
+
   .upload-heading {
     gap: 10px;
-    margin-bottom: 18px;
+    flex-wrap: wrap;
   }
 
   .upload-heading h2 {
     font-size: 17px;
   }
 
-  .upload-heading p {
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  .upload-heading-icon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-  }
-
   .upload-dropzone {
     min-height: 190px;
     padding: 20px 10px;
-  }
-
-  .upload-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 15px;
   }
 
   .upload-dropzone h3 {
@@ -2290,67 +2191,24 @@
 
   .upload-dropzone p {
     font-size: 11px;
-    line-height: 1.6;
-  }
-
-  .upload-formats {
-    gap: 6px;
-    margin-top: 13px;
-  }
-
-  .upload-formats span {
-    padding: 5px 9px;
-    font-size: 9px;
   }
 
   .selected-file-card {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 11px;
+    gap: 8px;
+    padding: 10px;
   }
 
   .file-details {
     min-width: 0;
-    flex: 1;
   }
 
   .file-details h4 {
-    max-width: 160px;
+    max-width: 140px;
+    overflow-wrap: anywhere;
     font-size: 11px;
   }
 
-  .file-details p {
-    font-size: 10px;
-  }
-
-  .file-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  /* Extraction */
-
-  .extraction-status {
-    padding: 12px;
-    font-size: 12px;
-  }
-
-  .extracted-resume {
-    padding: 15px;
-  }
-
-  .resume-text-preview {
-    max-height: 200px;
-    padding: 12px;
-    font-size: 11px;
-  }
-
-  /* ATS Results */
-
-  .analysis-results,
-  .job-results-section {
-    margin-top: 25px;
-  }
+  /* Analysis Results */
 
   .results-heading h2 {
     font-size: 20px;
@@ -2358,7 +2216,6 @@
 
   .results-heading p {
     font-size: 12px;
-    line-height: 1.6;
   }
 
   .ats-score-card,
@@ -2366,9 +2223,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 17px;
+    gap: 15px;
     padding: 20px 14px;
-    border-radius: 16px;
   }
 
   .score-circle,
@@ -2382,28 +2238,27 @@
     height: 90px;
   }
 
+  .score-circle h1 {
+    font-size: 29px;
+  }
+
   .job-match-circle-inner {
     width: 90px;
     height: 90px;
   }
 
-  .score-circle h1 {
-    font-size: 27px;
+  .job-match-circle-inner h1 {
+    font-size: 25px;
   }
 
-  .job-match-circle-inner h1 {
-    font-size: 26px;
+  .score-details,
+  .job-match-details {
+    width: 100%;
   }
 
   .score-details h3,
   .job-match-details h3 {
-    font-size: 18px;
-  }
-
-  .score-details p,
-  .job-match-details p {
-    font-size: 12px;
-    line-height: 1.7;
+    font-size: 19px;
   }
 
   /* Statistics */
@@ -2415,29 +2270,17 @@
 
   .analysis-stat-card {
     padding: 17px;
-    border-radius: 14px;
   }
 
   .analysis-stat-card h2 {
     font-size: 25px;
   }
 
-  .analysis-stat-card p {
-    font-size: 12px;
-  }
+  /* Skills */
 
-  /* Content Cards */
-
-  .analysis-content-card,
-  .job-skills-card,
-  .skills-chart-section {
-    padding: 16px;
-    border-radius: 14px;
-  }
-
-  .analysis-content-card h3,
-  .job-skills-card h3 {
-    font-size: 15px;
+  .skills-list,
+  .job-skills-list {
+    gap: 8px;
   }
 
   .skill-tag,
@@ -2447,968 +2290,489 @@
     font-size: 11px;
   }
 
-  .skills-list,
-  .job-skills-list {
-    gap: 8px;
-  }
-
-  .suggestions-list li {
-    padding: 10px 10px 10px 32px;
-    font-size: 12px;
-  }
-
-  .job-recommendations {
-    padding-left: 17px;
-  }
-
-  .job-recommendations li {
-    font-size: 12px;
+  .analysis-content-card h3,
+  .job-skills-card h3 {
+    font-size: 15px;
   }
 
   /* Job Matcher */
 
   .job-matcher-heading {
     gap: 10px;
-  }
-
-  .job-heading-icon {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
+    flex-wrap: wrap;
   }
 
   .job-matcher-heading h2 {
-    font-size: 16px;
-  }
-
-  .job-matcher-heading p {
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 17px;
   }
 
   .job-description-input {
-    min-height: 145px;
-    padding: 12px;
+    width: 100%;
+    min-height: 150px;
     font-size: 12px;
+    padding: 12px;
   }
 
   .job-input-footer {
     flex-wrap: wrap;
     gap: 8px;
-    font-size: 10px;
   }
 
   .analyze-job-btn {
-    min-height: 47px;
-    padding: 12px;
+    width: 100%;
+    min-height: 46px;
     font-size: 12px;
-  }
-
-  .job-matcher-helper {
-    font-size: 10px;
-    line-height: 1.6;
   }
 
   /* Skills Chart */
 
   .skills-chart-heading h2 {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .skills-chart-heading p {
     font-size: 11px;
-    line-height: 1.6;
   }
 
   .skills-chart-label {
-    font-size: 12px;
-  }
-
-  .skills-chart-track {
-    height: 9px;
+    font-size: 11px;
   }
 
   .skills-chart-legend {
+    flex-wrap: wrap;
     gap: 10px;
-    font-size: 10px;
   }
 
   /* Download Buttons */
 
   .download-buttons-container {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-  }
-
-  .download-buttons-container .download-report-btn {
     width: 100%;
-    padding: 12px;
-    font-size: 12px;
-  }
-}
-
-/* ---------- EXTRA SMALL PHONES ---------- */
-
-@media (max-width: 380px) {
-  .sidebar {
-    width: 52px;
-    min-width: 52px;
-    padding: 12px 4px;
   }
 
-  .brand-icon {
-    width: 35px;
-    height: 35px;
-    min-width: 35px;
+  .download-buttons-container .download-report-btn,
+  .download-report-btn {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
   }
 
-  .nav-item {
-    font-size: 15px;
-    padding: 11px 3px;
-  }
-
-  .main-content {
-    padding: 13px 9px;
-  }
-
-  .welcome-section {
-    padding: 19px 13px;
-  }
-
-  .welcome-section h1 {
-    font-size: 20px;
-  }
-
-  .welcome-section p {
-    font-size: 11px;
-  }
-
-  .resume-upload-section,
-  .job-matcher-section {
-    padding: 14px 10px;
-  }
-
-  .upload-heading h2 {
-    font-size: 15px;
-  }
-
-  .upload-dropzone {
-    min-height: 175px;
-  }
-
-  .file-details h4 {
-    max-width: 110px;
-  }
-
-  .ats-score-card,
-  .job-match-score-card {
-    padding: 17px 10px;
-  }
+  /* Prevent Horizontal Scrolling */
 
   .analysis-content-card,
   .job-skills-card,
-  .skills-chart-section {
-    padding: 13px;
+  .ats-score-card,
+  .job-match-score-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
-  .score-details h3,
-  .job-match-details h3 {
+  img,
+  svg,
+  canvas,
+  iframe {
+    max-width: 100%;
+  }
+}
+
+
+/* ---------- Extra Small Mobile Devices ---------- */
+
+@media screen and (max-width: 380px) {
+
+  .app {
+    padding-bottom: 68px;
+  }
+
+  .sidebar {
+    height: 64px;
+    min-height: 64px;
+    padding: 5px 3px;
+  }
+
+  .nav-item {
+    gap: 3px;
+    padding: 6px 1px;
     font-size: 16px;
   }
-}
 
-/* ---------- ACCESSIBILITY ---------- */
-
-@media (prefers-reduced-motion: reduce) {
-  .app *,
-  .app *::before,
-  .app *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* ==========================================
-   SKILLSYNC DASHBOARD RESPONSIVENESS
-========================================== */
-
-/* ---------- Desktop: 1200px and above ---------- */
-
-@media (min-width: 1200px) {
-  .sidebar {
-    width: 255px;
+  .nav-item span {
+    font-size: 8px;
   }
 
   .main-content {
-    padding: 35px 40px;
-  }
-
-  .topbar {
-    margin-bottom: 40px;
+    padding: 13px 9px 20px;
   }
 
   .welcome-section {
-    padding: 42px;
-    min-height: 220px;
+    padding: 20px 14px;
   }
 
   .welcome-section h1 {
-    font-size: 38px;
-  }
-}
-
-/* ---------- Laptop: 901px - 1199px ---------- */
-
-@media (min-width: 901px) and (max-width: 1199px) {
-  .sidebar {
-    width: 220px;
-    padding: 24px 13px;
-  }
-
-  .main-content {
-    padding: 25px;
-  }
-
-  .brand-logo {
-    gap: 9px;
-    padding: 15px 7px;
-  }
-
-  .brand-icon {
-    width: 43px;
-    height: 43px;
-    min-width: 43px;
-  }
-
-  .brand-text h2 {
     font-size: 20px;
   }
 
-  .brand-text span {
-    font-size: 7px;
-    letter-spacing: 0.5px;
+  .resume-upload-section,
+  .job-matcher-section,
+  .skills-chart-section {
+    padding: 14px 11px;
   }
 
-  .nav-item {
-    padding: 12px 10px;
-    font-size: 13px;
-    gap: 10px;
+  .score-circle,
+  .job-match-circle {
+    width: 100px;
+    height: 100px;
   }
 
-  .sidebar-card {
-    padding: 13px;
+  .score-circle::before {
+    width: 82px;
+    height: 82px;
   }
 
-  .welcome-section {
-    padding: 32px;
+  .job-match-circle-inner {
+    width: 82px;
+    height: 82px;
   }
 
-  .welcome-section h1 {
-    font-size: 31px;
-  }
-
-  .welcome-icon {
-    right: 25px;
-    font-size: 60px;
+  .analysis-stat-card {
+    padding: 14px;
   }
 }
 
-/* ---------- Tablet: 601px - 900px ---------- */
+/* =========================================
+   SKILLSYNC - MOBILE RESPONSIVE IMPROVEMENTS
+========================================= */
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .app {
-    width: 100%;
-  }
-
-  .sidebar {
-    width: 75px;
-    min-width: 75px;
-    padding: 20px 8px;
-  }
-
-  .brand-logo {
-    justify-content: center;
-    padding: 12px 0;
-  }
-
-  .brand-text,
-  .menu-title,
-  .nav-item span,
-  .sidebar-card,
-  .profile > :not(.avatar) {
-    display: none;
-  }
-
-  .brand-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-  }
-
-  .nav-item {
-    justify-content: center;
-    padding: 14px 5px;
-    font-size: 19px;
-  }
-
-  .profile {
-    justify-content: center;
-  }
-
+/* Tablet */
+@media (max-width: 900px) {
   .main-content {
+    padding: 22px;
     min-width: 0;
-    padding: 24px 20px;
   }
 
-  .topbar {
-    margin-bottom: 28px;
+  .resume-upload-section {
+    padding: 22px;
   }
 
-  .welcome-section {
-    padding: 27px 23px;
-    min-height: auto;
-  }
-
-  .welcome-section h1 {
-    max-width: 90%;
-    font-size: 27px;
-  }
-
-  .welcome-section p {
-    max-width: 85%;
-    font-size: 13px;
-  }
-
-  .welcome-icon {
-    display: none;
-  }
-
-  .placeholder-section {
-    padding: 23px;
+  .upload-dropzone {
+    padding: 25px 15px;
   }
 }
 
-/* ---------- Mobile: 381px - 600px ---------- */
+/* Mobile navigation and dashboard */
+@media (max-width: 650px) {
 
-@media (min-width: 381px) and (max-width: 600px) {
-  .app {
-    width: 100%;
-    min-height: 100vh;
-  }
-
+  /* Bottom Navigation Bar */
   .sidebar {
-    width: 58px;
-    min-width: 58px;
-    padding: 15px 5px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+
+    width: 100%;
+    min-height: 0;
+    height: auto;
+
+    padding: 7px 5px calc(7px + env(safe-area-inset-bottom));
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    background: var(--surface);
+    border-right: none;
+    border-top: 1px solid var(--border);
+
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+    z-index: 999;
   }
 
-  .brand-logo {
-    justify-content: center;
-    padding: 10px 0;
+  /* Hide desktop sidebar elements */
+  .sidebar .brand,
+  .sidebar .brand-logo,
+  .sidebar .menu-title,
+  .sidebar .sidebar-bottom,
+  .sidebar .sidebar-card,
+  .sidebar .profile {
+    display: none !important;
   }
 
-  .brand-text,
-  .menu-title,
-  .nav-item span,
-  .sidebar-card,
-  .profile > :not(.avatar) {
-    display: none;
-  }
-
-  .brand-icon {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    border-radius: 12px;
-  }
-
-  .nav-item {
-    justify-content: center;
-    padding: 12px 3px;
-    font-size: 16px;
-  }
-
-  .profile {
-    justify-content: center;
-    padding-top: 12px;
-  }
-
-  .avatar {
-    width: 33px;
-    height: 33px;
-    font-size: 12px;
-  }
-
-  .main-content {
+  /* Navigation wrapper */
+  .sidebar nav {
+    display: flex;
     flex: 1;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 2px;
+  }
+
+  /* Individual navigation items */
+  .sidebar .nav-item {
+    flex: 1 1 0;
     min-width: 0;
-    padding: 16px 12px;
+    min-height: 66px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+    padding: 6px 2px;
+    margin: 0;
+
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+
+    white-space: normal;
+    overflow: hidden;
+    transform: none;
+  }
+
+  .sidebar .nav-item:hover {
+    transform: none;
+  }
+
+  /* Navigation icons */
+  .sidebar .nav-item svg {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+  }
+
+  /* Navigation labels */
+  .sidebar .nav-item span {
+    display: block !important;
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.15;
+
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* Active navigation item */
+  .sidebar .nav-item.active {
+    color: var(--primary);
+    background: var(--primary-light);
+    box-shadow: none;
+  }
+
+  /* Main content spacing */
+  .main-content {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 12px 115px;
   }
 
   .topbar {
     margin-bottom: 22px;
   }
 
-  .breadcrumb {
-    font-size: 12px;
-  }
-
-  .theme-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-  }
-
-  .welcome-section {
-    padding: 22px 17px;
-    border-radius: 16px;
-  }
-
-  .welcome-tag {
-    font-size: 9px;
-    padding: 6px 10px;
-  }
-
-  .welcome-section h1 {
-    max-width: 100%;
-    font-size: 23px;
-    line-height: 1.4;
-  }
-
-  .welcome-section p {
-    max-width: 100%;
-    font-size: 12px;
-    line-height: 1.7;
-  }
-
-  .welcome-icon {
-    display: none;
-  }
-
-  .placeholder-section {
-    margin-top: 18px;
-    padding: 20px 12px;
-    border-radius: 14px;
-    font-size: 12px;
-  }
-}
-
-/* ---------- Small Mobile: 380px and below ---------- */
-
-@media (max-width: 380px) {
-  .app {
-    width: 100%;
-  }
-
-  .sidebar {
-    width: 50px;
-    min-width: 50px;
-    padding: 12px 4px;
-  }
-
-  .brand-logo {
-    justify-content: center;
-    padding: 8px 0;
-  }
-
-  .brand-text,
-  .menu-title,
-  .nav-item span,
-  .sidebar-card,
-  .profile > :not(.avatar) {
-    display: none;
-  }
-
-  .brand-icon {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
-  }
-
-  .nav-item {
-    justify-content: center;
-    padding: 11px 2px;
-    font-size: 15px;
-  }
-
-  .profile {
-    justify-content: center;
-  }
-
-  .avatar {
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
-  }
-
-  .main-content {
-    min-width: 0;
-    padding: 13px 9px;
-  }
-
-  .topbar {
-    margin-bottom: 18px;
-  }
-
-  .breadcrumb {
-    font-size: 10px;
-  }
-
-  .theme-btn {
-    width: 33px;
-    height: 33px;
-    font-size: 14px;
-  }
-
-  .welcome-section {
-    padding: 19px 13px;
-    border-radius: 14px;
-  }
-
-  .welcome-tag {
-    font-size: 8px;
-    padding: 5px 8px;
-  }
-
-  .welcome-section h1 {
-    font-size: 20px;
-    line-height: 1.4;
-  }
-
-  .welcome-section p {
-    font-size: 11px;
-    line-height: 1.7;
-  }
-
-  .welcome-icon {
-    display: none;
-  }
-
-  .placeholder-section {
-    margin-top: 15px;
-    padding: 16px 10px;
-    font-size: 11px;
-  }
-}
-
-/* ---------- Dashboard Overflow Protection ---------- */
-
-@media (max-width: 900px) {
-  .app {
-    overflow-x: hidden;
-  }
-
-  .sidebar {
-    flex-shrink: 0;
-  }
-
-  .main-content {
-    flex: 1;
-    min-width: 0;
-    overflow-x: hidden;
-  }
-
-  .topbar,
-  .welcome-section,
-  .placeholder-section {
-    max-width: 100%;
-  }
-
-  .welcome-section::before,
-  .welcome-section::after {
-    pointer-events: none;
-  }
-}
-
-/* =========================================================
-   SKILLSYNC DASHBOARD - MOBILE RESPONSIVENESS
-========================================================= */
-
-/* Prevent horizontal scrolling */
-.app,
-.app * {
-  box-sizing: border-box;
-}
-
-.app {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: clip;
-}
-
-.main-content {
-  min-width: 0;
-  width: 100%;
-}
-
-/* TABLET: 601px - 900px */
-@media (min-width: 601px) and (max-width: 900px) {
-  .sidebar {
-    width: 72px;
-    min-width: 72px;
-    padding: 18px 7px;
-  }
-
-  .brand-logo {
-    justify-content: center;
-    padding: 10px 0 22px;
-  }
-
-  .brand-text,
-  .menu-title,
-  .nav-item span,
-  .sidebar-card,
-  .profile > :not(.avatar) {
-    display: none;
-  }
-
-  .brand-icon {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-  }
-
-  .nav-item {
-    justify-content: center;
-    width: 100%;
-    min-height: 44px;
-    padding: 11px 4px;
-    margin-bottom: 7px;
-  }
-
-  .profile {
-    justify-content: center;
-    padding-top: 12px;
-  }
-
-  .main-content {
-    padding: 22px 18px;
-  }
-
-  .welcome-section {
-    padding: 26px 22px;
-  }
-
-  .welcome-section h1,
-  .welcome-section p {
-    max-width: 100%;
-  }
-
-  .welcome-icon {
-    display: none;
-  }
-}
-
-/* MOBILE: 600px AND BELOW */
-@media (max-width: 600px) {
-  .app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-bottom: 68px;
-    overflow-x: clip;
-  }
-
-  /* Fixed bottom navigation */
-  .sidebar {
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: auto;
-    width: 100%;
-    min-width: 0;
-    min-height: 64px;
-    height: auto;
-    padding: 7px 8px;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    gap: 4px;
-    border-right: 0;
-    border-top: 1px solid var(--border);
-    background: var(--surface);
-    box-shadow: 0 -5px 20px rgba(20, 20, 45, 0.08);
-  }
-
-  .sidebar .brand-logo,
-  .sidebar .menu-title,
-  .sidebar .sidebar-card,
-  .sidebar .profile {
-    display: none !important;
-  }
-
-  .sidebar nav {
-    width: 100%;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: space-around;
-    gap: 4px;
-  }
-
-  .sidebar .nav-item {
-    flex: 1 1 0;
-    min-width: 0;
-    min-height: 48px;
-    margin: 0;
-    padding: 7px 3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    transform: none;
-  }
-
-  .sidebar .nav-item span {
-    display: block !important;
-    max-width: 100%;
-    overflow: hidden;
-    font-size: 9px;
-    line-height: 1.2;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .sidebar .nav-item.active {
-    box-shadow: inset 0 -2px 0 var(--primary);
-  }
-
-  /* Main dashboard */
-  .main-content {
-    flex: 1;
-    width: 100%;
-    min-width: 0;
-    padding: 17px 13px 25px;
-    overflow: visible;
-  }
-
-  .topbar {
-    width: 100%;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .breadcrumb {
-    min-width: 0;
-    font-size: 12px;
-    overflow-wrap: anywhere;
-  }
-
-  .theme-btn {
-    flex: 0 0 38px;
-    width: 38px;
-    height: 38px;
-  }
-
   /* Welcome section */
   .welcome-section {
-    width: 100%;
-    min-height: 0;
-    padding: 23px 17px;
+    padding: 25px 20px;
     border-radius: 17px;
   }
 
   .welcome-section h1 {
-    max-width: 100%;
-    font-size: clamp(21px, 6vw, 27px);
+    font-size: 24px;
     line-height: 1.3;
-    overflow-wrap: anywhere;
   }
 
   .welcome-section p {
-    max-width: 100%;
-    font-size: 12px;
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .welcome-icon {
     display: none;
   }
 
-  .placeholder-section {
-    width: 100%;
-    margin-top: 18px;
-    padding: 19px 13px;
+  /* Resume upload card */
+  .resume-upload-section {
+    margin-top: 20px;
+    padding: 18px 14px;
+    border-radius: 17px;
   }
 
-  /* Dashboard sections */
-  .resume-upload-section,
-  .job-matcher-section,
+  .upload-heading {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .upload-heading h2 {
+    font-size: 17px;
+  }
+
+  .upload-heading p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .upload-heading-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+  }
+
+  .upload-dropzone {
+    min-height: 220px;
+    padding: 22px 10px;
+    border-radius: 15px;
+  }
+
+  .upload-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 14px;
+    border-radius: 17px;
+  }
+
+  .upload-dropzone h3 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .upload-dropzone p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .upload-formats {
+    gap: 7px;
+    margin-top: 15px;
+  }
+
+  .upload-formats span {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  /* Analysis results */
   .analysis-results,
-  .job-results-section,
-  .skills-chart-section,
-  .placeholder-section {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  .job-results-section {
+    margin-top: 25px;
   }
 
-  .upload-heading,
-  .job-matcher-heading {
-    min-width: 0;
-    align-items: flex-start;
+  .analysis-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
-  .upload-heading > div,
-  .job-matcher-heading > div {
-    min-width: 0;
+  .analysis-stat-card {
+    padding: 16px;
+  }
+
+  .analysis-content-card {
+    padding: 17px;
+  }
+
+  .ats-score-card,
+  .job-match-score-card {
+    padding: 18px;
+    gap: 16px;
   }
 
   .selected-file-card {
-    width: 100%;
-    min-width: 0;
-    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .file-details {
     min-width: 0;
-    flex: 1 1 0;
   }
 
   .file-details h4 {
-    max-width: 100%;
-    overflow-wrap: anywhere;
+    max-width: 180px;
   }
 
-  /* Score cards */
-  .ats-score-card,
-  .job-match-score-card {
-    width: 100%;
-    min-width: 0;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-    padding: 20px 14px;
-  }
-
-  /* Analysis statistics */
-  .analysis-stats {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .analysis-stat-card,
+  /* Prevent horizontal overflow */
+  .analysis-results,
+  .job-results-section,
+  .resume-upload-section,
   .analysis-content-card,
-  .job-skills-card,
-  .skills-chart-section {
-    min-width: 0;
-    padding: 16px;
-  }
-
-  .skills-list,
-  .job-skills-list,
-  .upload-formats,
-  .skills-chart-legend {
-    flex-wrap: wrap;
-  }
-
-  .job-input-footer {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  /* Download buttons */
-  .download-buttons-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .download-buttons-container .download-report-btn,
-  .download-report-btn {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  img,
-  svg,
-  canvas,
-  video,
-  iframe {
+  .job-match-score-card {
     max-width: 100%;
+    min-width: 0;
   }
 }
 
-/* EXTRA SMALL PHONES: 380px AND BELOW */
+/* Extra small phones */
 @media (max-width: 380px) {
-  .app {
-    padding-bottom: 64px;
+  .main-content {
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 110px;
   }
 
   .sidebar {
-    min-height: 60px;
-    padding: 5px 4px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
 
   .sidebar .nav-item {
-    min-height: 46px;
-    padding: 6px 2px;
-    font-size: 15px;
+    min-height: 62px;
+    gap: 4px;
+    padding: 5px 1px;
+  }
+
+  .sidebar .nav-item svg {
+    width: 21px;
+    height: 21px;
   }
 
   .sidebar .nav-item span {
-    font-size: 8px;
+    font-size: 9px;
   }
 
-  .main-content {
-    padding: 13px 9px 22px;
+  .resume-upload-section {
+    padding: 15px 11px;
   }
 
-  .topbar {
-    margin-bottom: 16px;
+  .upload-dropzone {
+    min-height: 205px;
+    padding: 18px 7px;
   }
 
-  .welcome-section {
-    padding: 19px 13px;
+  .upload-formats {
+    gap: 5px;
   }
 
-  .welcome-section h1 {
-    font-size: 20px;
+  .upload-formats span {
+    padding: 5px 8px;
+    font-size: 9px;
   }
 
-  .welcome-section p {
-    font-size: 11px;
-  }
-
-  .resume-upload-section,
-  .job-matcher-section {
-    padding: 14px 10px;
-  }
-
-  .analysis-content-card,
-  .job-skills-card,
-  .skills-chart-section {
-    padding: 13px;
-  }
-
-  .score-circle,
-  .job-match-circle {
-    width: 105px;
-    height: 105px;
-  }
-
-  .score-circle::before {
-    width: 86px;
-    height: 86px;
-  }
-
-  .job-match-circle-inner {
-    width: 86px;
-    height: 86px;
+  .analysis-stats {
+    grid-template-columns: 1fr;
   }
 }
+/* Remove text underlines from dashboard navigation */
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active,
+.sidebar .nav-item,
+.sidebar .nav-item span {
+  text-decoration: none !important;
+}
 
-
-
+/* Remove underlines from dashboard links */
+.main-content a,
+.main-content a:hover,
+.main-content a:focus {
+  text-decoration: none !important;
+}
