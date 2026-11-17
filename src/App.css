@@ -1951,3 +1951,683 @@
 .brand-logo:hover .brand-icon {
   transform: none;
 }
+
+/* =========================================
+   SKILLSYNC - COMPLETE RESPONSIVE DESIGN
+   Mobile | Tablet | Laptop | Desktop
+========================================= */
+
+/* ---------- LARGE LAPTOPS ---------- */
+
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 255px;
+  }
+
+  .main-content {
+    padding: 35px 45px;
+  }
+
+  .welcome-section {
+    padding: 42px;
+  }
+
+  .analysis-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ---------- LAPTOPS ---------- */
+
+@media (max-width: 1199px) {
+  .main-content {
+    padding: 28px;
+  }
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .welcome-section {
+    padding: 32px;
+  }
+
+  .welcome-icon {
+    right: 30px;
+    font-size: 65px;
+  }
+
+  .analysis-content-card,
+  .job-skills-card,
+  .skills-chart-section {
+    padding: 22px;
+  }
+
+  .brand-text h2 {
+    font-size: 22px;
+  }
+}
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+    padding: 20px 12px;
+  }
+
+  .main-content {
+    padding: 22px 18px;
+  }
+
+  .brand-logo {
+    gap: 9px;
+    padding: 14px 7px;
+  }
+
+  .brand-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+  }
+
+  .brand-text h2 {
+    font-size: 20px;
+  }
+
+  .brand-text span {
+    font-size: 7px;
+    letter-spacing: 0.4px;
+  }
+
+  .welcome-section {
+    padding: 28px;
+  }
+
+  .welcome-section h1 {
+    font-size: 29px;
+    max-width: 85%;
+  }
+
+  .welcome-section p {
+    max-width: 80%;
+    font-size: 14px;
+  }
+
+  .welcome-icon {
+    right: 20px;
+    font-size: 55px;
+  }
+
+  .analysis-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .ats-score-card,
+  .job-match-score-card {
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .analysis-stat-card {
+    padding: 18px;
+  }
+
+  .analysis-stat-card h2 {
+    font-size: 26px;
+  }
+
+  .resume-upload-section,
+  .job-matcher-section {
+    padding: 23px;
+  }
+}
+
+/* ---------- SMALL TABLETS ---------- */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 75px;
+    padding: 18px 8px;
+  }
+
+  .brand-logo {
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .brand-text,
+  .menu-title,
+  .nav-item span,
+  .sidebar-card,
+  .profile > :not(.avatar) {
+    display: none;
+  }
+
+  .brand-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 13px 5px;
+    font-size: 18px;
+  }
+
+  .profile {
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 20px 16px;
+  }
+
+  .topbar {
+    margin-bottom: 28px;
+  }
+
+  .welcome-section {
+    padding: 25px 22px;
+  }
+
+  .welcome-section h1 {
+    font-size: 26px;
+  }
+
+  .welcome-icon {
+    display: none;
+  }
+
+  .analysis-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .score-circle,
+  .job-match-circle {
+    width: 115px;
+    height: 115px;
+  }
+
+  .score-circle::before {
+    width: 94px;
+    height: 94px;
+  }
+
+  .job-match-circle-inner {
+    width: 93px;
+    height: 93px;
+  }
+
+  .score-circle h1 {
+    font-size: 29px;
+  }
+
+  .job-match-circle-inner h1 {
+    font-size: 27px;
+  }
+
+  .score-details h3,
+  .job-match-details h3 {
+    font-size: 20px;
+  }
+}
+
+/* ---------- MOBILE PHONES ---------- */
+
+@media (max-width: 600px) {
+  .app {
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 60px;
+    min-width: 60px;
+    padding: 15px 6px;
+  }
+
+  .brand-icon {
+    width: 39px;
+    height: 39px;
+    min-width: 39px;
+    border-radius: 12px;
+    font-size: 19px;
+  }
+
+  .nav-item {
+    padding: 12px 4px;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .main-content {
+    padding: 16px 11px;
+  }
+
+  .topbar {
+    margin-bottom: 20px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+  .theme-btn {
+    width: 37px;
+    height: 37px;
+    font-size: 16px;
+  }
+
+  /* Welcome */
+
+  .welcome-section {
+    padding: 23px 17px;
+    border-radius: 17px;
+  }
+
+  .welcome-tag {
+    font-size: 9px;
+    padding: 6px 9px;
+  }
+
+  .welcome-section h1 {
+    font-size: 23px;
+    line-height: 1.35;
+    max-width: 100%;
+  }
+
+  .welcome-section p {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* Resume Upload */
+
+  .resume-upload-section,
+  .job-matcher-section {
+    padding: 17px 13px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+
+  .upload-heading {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .upload-heading h2 {
+    font-size: 17px;
+  }
+
+  .upload-heading p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .upload-heading-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .upload-dropzone {
+    min-height: 190px;
+    padding: 20px 10px;
+  }
+
+  .upload-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+  }
+
+  .upload-dropzone h3 {
+    font-size: 15px;
+  }
+
+  .upload-dropzone p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .upload-formats {
+    gap: 6px;
+    margin-top: 13px;
+  }
+
+  .upload-formats span {
+    padding: 5px 9px;
+    font-size: 9px;
+  }
+
+  .selected-file-card {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 11px;
+  }
+
+  .file-details {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .file-details h4 {
+    max-width: 160px;
+    font-size: 11px;
+  }
+
+  .file-details p {
+    font-size: 10px;
+  }
+
+  .file-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Extraction */
+
+  .extraction-status {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .extracted-resume {
+    padding: 15px;
+  }
+
+  .resume-text-preview {
+    max-height: 200px;
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  /* ATS Results */
+
+  .analysis-results,
+  .job-results-section {
+    margin-top: 25px;
+  }
+
+  .results-heading h2 {
+    font-size: 20px;
+  }
+
+  .results-heading p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .ats-score-card,
+  .job-match-score-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 17px;
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  .score-circle,
+  .job-match-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .score-circle::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .job-match-circle-inner {
+    width: 90px;
+    height: 90px;
+  }
+
+  .score-circle h1 {
+    font-size: 27px;
+  }
+
+  .job-match-circle-inner h1 {
+    font-size: 26px;
+  }
+
+  .score-details h3,
+  .job-match-details h3 {
+    font-size: 18px;
+  }
+
+  .score-details p,
+  .job-match-details p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* Statistics */
+
+  .analysis-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .analysis-stat-card {
+    padding: 17px;
+    border-radius: 14px;
+  }
+
+  .analysis-stat-card h2 {
+    font-size: 25px;
+  }
+
+  .analysis-stat-card p {
+    font-size: 12px;
+  }
+
+  /* Content Cards */
+
+  .analysis-content-card,
+  .job-skills-card,
+  .skills-chart-section {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .analysis-content-card h3,
+  .job-skills-card h3 {
+    font-size: 15px;
+  }
+
+  .skill-tag,
+  .matched-skill,
+  .missing-skill {
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+
+  .skills-list,
+  .job-skills-list {
+    gap: 8px;
+  }
+
+  .suggestions-list li {
+    padding: 10px 10px 10px 32px;
+    font-size: 12px;
+  }
+
+  .job-recommendations {
+    padding-left: 17px;
+  }
+
+  .job-recommendations li {
+    font-size: 12px;
+  }
+
+  /* Job Matcher */
+
+  .job-matcher-heading {
+    gap: 10px;
+  }
+
+  .job-heading-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .job-matcher-heading h2 {
+    font-size: 16px;
+  }
+
+  .job-matcher-heading p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .job-description-input {
+    min-height: 145px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .job-input-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .analyze-job-btn {
+    min-height: 47px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .job-matcher-helper {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  /* Skills Chart */
+
+  .skills-chart-heading h2 {
+    font-size: 16px;
+  }
+
+  .skills-chart-heading p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .skills-chart-label {
+    font-size: 12px;
+  }
+
+  .skills-chart-track {
+    height: 9px;
+  }
+
+  .skills-chart-legend {
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  /* Download Buttons */
+
+  .download-buttons-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .download-buttons-container .download-report-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+/* ---------- EXTRA SMALL PHONES ---------- */
+
+@media (max-width: 380px) {
+  .sidebar {
+    width: 52px;
+    min-width: 52px;
+    padding: 12px 4px;
+  }
+
+  .brand-icon {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+
+  .nav-item {
+    font-size: 15px;
+    padding: 11px 3px;
+  }
+
+  .main-content {
+    padding: 13px 9px;
+  }
+
+  .welcome-section {
+    padding: 19px 13px;
+  }
+
+  .welcome-section h1 {
+    font-size: 20px;
+  }
+
+  .welcome-section p {
+    font-size: 11px;
+  }
+
+  .resume-upload-section,
+  .job-matcher-section {
+    padding: 14px 10px;
+  }
+
+  .upload-heading h2 {
+    font-size: 15px;
+  }
+
+  .upload-dropzone {
+    min-height: 175px;
+  }
+
+  .file-details h4 {
+    max-width: 110px;
+  }
+
+  .ats-score-card,
+  .job-match-score-card {
+    padding: 17px 10px;
+  }
+
+  .analysis-content-card,
+  .job-skills-card,
+  .skills-chart-section {
+    padding: 13px;
+  }
+
+  .score-details h3,
+  .job-match-details h3 {
+    font-size: 16px;
+  }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .app *,
+  .app *::before,
+  .app *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
